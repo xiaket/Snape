@@ -29,8 +29,10 @@ data = {'name': 1, 'param': 2}
 response = requests.post(url, data=json.dumps(data), headers=headers}
 ```
 
-Please note that after you have added all the data there, you need to add an `Enter` and a `Ctrl-D` to send an `EOL` to make the end of the input.
+Please note that after you have added all the data there, you need to add an `Enter` and a `Ctrl-D` to send an `EOL` to mark the end of the stream.
 
-After that, the snippet would be added to `~/.snape.json`.
+After that, the snippet would be saved to `~/.snape.json`.
 
 You can list all the snippets by running `Snape`. You can also search the snippets with `Snape search [query]` to look for the snippet you need.
+
+There's no intention to add the ability to modify or remove a snippet, since you can easily do that with any editor you like.
