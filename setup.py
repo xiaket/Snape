@@ -19,7 +19,7 @@ if __name__ == "__main__":
         long_description=long_description,
         py_modules=['Snape'],
         entry_points={
-            'Snape': ['Snape = Snape:main']
+            'console_scripts': ['Snape = Snape:main']
         },
         keywords=['snippet manager', 'snippets'],
         classifiers=[
