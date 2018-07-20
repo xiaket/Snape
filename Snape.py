@@ -23,7 +23,7 @@ Usage:
 
 
 class SnippetFile:
-    DBFILE = os.path.expanduser("~/.snapeng.json")
+    DBFILE = os.path.expanduser("~/.snape.json")
 
     def __init__(self):
         """Load the DB file."""
