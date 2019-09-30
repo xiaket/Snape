@@ -21,9 +21,18 @@ Usage:
     snape search [pattern]      # search for a pattern in the library.
 """
 
+# Use XDG_CONFIG_HOME as advised here:
+#    https://0x46.net/thoughts/2019/02/01/dotfile-madness/
+if "XDG_CONFIG_HOME" not in os.environ:
+    DBFile = os.path.expanduser("~/.snape.json")
+else:
+    DBFile = os.path.join(
+        os.environ["XDG_CONFIG_HOME"], "snape", "snape.json"
+    )
+
 
 class SnippetFile:
-    DBFILE = os.path.expanduser("~/.snape.json")
+    DBFILE = DBFile
 
     def __init__(self):
         """Load the DB file."""
